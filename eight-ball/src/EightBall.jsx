@@ -14,11 +14,17 @@ const EightBall = ({answers}) => {
     setMessage(randomMessage.msg);
   };
 
+  const reset = () => {
+    setColor("black");
+    setMessage("Think of a question");
+  };
+
   return (
     <>
       <div class="EightBall" style={{backgroundColor: color}} onClick={chooseRandomMessage}>
         <p class="EightBall-message">{message}</p>
       </div>
+      <button class="EightBall-button" onClick={reset}>Reset</button>
     </>
   );
 };
